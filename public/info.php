@@ -345,9 +345,9 @@ $userName = $_SESSION['user_name'];
 
         </div>
 
-      <footer>
-        <p>TradeMe © כל הזכויות שמורות | צור קשר: guy.marcus@ruppin365.net</p>
-      </footer>
+        <footer class="site-footer">
+          <p>צור קשר: guy.marcus@ruppin365.net</p>
+        </footer>
 
       <script>
         $(document).ready(function () {

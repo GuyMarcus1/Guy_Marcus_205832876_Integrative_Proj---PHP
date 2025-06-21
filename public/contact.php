@@ -81,9 +81,9 @@ if (!isset($_SESSION['user_id'])) {
     </form>
   </div>
 
-  <footer>
-    <p>צור קשר: guy.marcus@ruppin365.net | טלפון: 03-1234567</p>
-  </footer>
+<footer class="site-footer">
+  <p>צור קשר: guy.marcus@ruppin365.net</p>
+</footer>
 
   <script>
     $(document).ready(function () {
@@ -98,6 +98,11 @@ if (!isset($_SESSION['user_id'])) {
         window.location.href = "login.html";
       });
     });
+
+    $("#founder-btn").on("click", function () {
+      window.location.href = "about_me.php";
+    });
+
   </script>
 </body>
 </html>

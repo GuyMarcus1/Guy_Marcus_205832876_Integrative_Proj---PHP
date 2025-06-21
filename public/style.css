@@ -1,51 +1,45 @@
-/* ========================================================= */
-/* Global / Base Styles                                    */
-/* ========================================================= */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* גופן מודרני יותר */
-    background-color: #f4f7f6; /* גוון אפרפר-לבן נעים */
-    color: #333; /* צבע טקסט כללי */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
     margin: 0;
     padding: 0;
-    direction: rtl; /* עברית מימין לשמאל */
+    direction: rtl;
     text-align: right;
-    line-height: 1.6; /* שיפור קריאות לטקסט */
+    line-height: 1.6;
 }
 
 a {
     text-decoration: none;
-    color: #0066cc; /* כחול סטנדרטי לקישורים */
-    transition: color 0.3s ease; /* אנימציה חלקה לשינוי צבע */
+    color: #0066cc;
+    transition: color 0.3s ease;
 }
 
 a:hover {
     color: #004999;
-    text-decoration: underline; /* הדגשה בריחוף */
+    text-decoration: underline;
 }
 
 h2, h3 {
-    color: #2c3e50; /* צבע כותרות כהה ואחיד */
+    color: #2c3e50;
 }
 
 strong {
-    color: #0066cc; /* הדגשת טקסט בכחול */
+    color: #0066cc;
 }
 
-/* ========================================================= */
-/* Header                                                  */
-/* ========================================================= */
 header {
-    background-color: #ffffff; /* רקע לבן ונקי */
-    padding: 15px 30px; /* מרווח פנימי גדול יותר */
-    border-bottom: 1px solid #eee; /* קו הפרדה עדין בתחתית */
+    background-color: #ffffff;
+    padding: 15px 30px;
+    border-bottom: 1px solid #eee;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* צל עדין למראה תלת ממדי */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-header img.header-logo { /* ספציפיות לוגו בהאדר */
-    height: 60px; /* גובה הלוגו */
+header img.header-logo {
+    height: 60px;
 }
 
 header nav ul {
@@ -53,45 +47,41 @@ header nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 25px; /* מרווח בין פריטי התפריט */
+    gap: 25px;
 }
 
 header nav ul li a {
-    color: #0066cc; /* צבע כחול כמו בשאר הקישורים */
+    color: #0066cc;
     font-weight: bold;
     font-size: 1.1em;
     transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #004999; /* כחול כהה בריחוף */
+    color: #004999;
     text-decoration: none;
 }
 
-/* ========================================================= */
-/* General Containers & Forms                              */
-/* ========================================================= */
 .form-container {
-    max-width: 900px; /* רוחב מרבי של 900px */
-    margin: 40px auto; /* ריכוז עם מרווחים למעלה ולמטה */
+    max-width: 900px;
+    margin: 40px auto;
     padding: 30px;
     background-color: #ffffff;
-    border-radius: 15px; /* פינות מעוגלות יותר */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* צל עמוק יותר */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .form-container h2 {
     margin-top: 0;
     margin-bottom: 30px;
-    color: #0066cc; /* צבע כותרת כחול */
+    color: #0066cc;
     font-size: 2em;
     text-align: center;
     border-bottom: 2px solid #eee;
     padding-bottom: 15px;
 }
 
-/* Style for general form elements (used in profile/dashboard etc.) */
-.profile-form { /* שם קלאס גנרי יותר לטפסים אם משתמשים בו במקומות נוספים */
+.profile-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -114,11 +104,11 @@ header nav ul li a:hover {
 }
 
 .profile-form textarea {
-    resize: vertical; /* מאפשר שינוי גודל אנכי בלבד */
+    resize: vertical;
 }
 
 .profile-form button {
-    width: fit-content; /* כפתור ברוחב התוכן שלו */
+    width: fit-content;
     padding: 10px 20px;
     background-color: #0066cc;
     color: white;
@@ -133,30 +123,27 @@ header nav ul li a:hover {
     background-color: #004999;
 }
 
-/* ========================================================= */
-/* Info Page Specific (info.php)                           */
-/* ========================================================= */
-.main-content-info { /* קונטיינר ספציפי לדף המידע הפיננסי */
+.main-content-info {
     max-width: 900px;
-    margin: 30px auto; /* מרווח עליון ותחתון, ריכוז */
+    margin: 30px auto;
     padding: 30px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     border-radius: 8px;
 }
 
-.page-title { /* כותרת הדף בדף המידע */
+.page-title {
     text-align: center;
     color: #0e76a8;
     margin-bottom: 30px;
 }
 
 .toggle-btn {
-    background-color: #007bff; /* כחול חי יותר */
+    background-color: #007bff;
     color: white;
     border: none;
     padding: 15px 25px;
-    margin: 15px 0 5px; /* מרווח למעלה ולמטה, קצת יותר קטן מה-info-box */
+    margin: 15px 0 5px;
     font-size: 1.1em;
     font-weight: bold;
     border-radius: 10px;
@@ -169,19 +156,19 @@ header nav ul li a:hover {
 
 .toggle-btn:hover {
     background-color: #0056b3;
-    transform: translateY(-2px); /* אפקט קל בריחוף */
+    transform: translateY(-2px);
 }
 
 .info-box {
-    display: none; /* נשלט על ידי JavaScript */
-    background-color: #eef7ff; /* גוון בהיר מאוד, כמעט לבן-כחלחל */
-    border: 1px solid #b3d9ff; /* גבול עדין */
+    display: none;
+    background-color: #eef7ff;
+    border: 1px solid #b3d9ff;
     border-radius: 12px;
     padding: 25px;
     margin-bottom: 25px;
     line-height: 1.7;
     text-align: right;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.08); /* צל פנימי קל */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.08);
 }
 
 .info-box h3 {
@@ -197,11 +184,11 @@ header nav ul li a:hover {
 
 .info-box ul {
     list-style-type: disc;
-    padding-right: 25px; /* התאמה לכיוון מימין לשמאל */
+    padding-right: 25px;
     margin-bottom: 15px;
 }
 
-.info-box ul ul { /* רשימות מקוננות */
+.info-box ul ul {
     list-style-type: circle;
     padding-right: 20px;
     margin-top: 8px;
@@ -211,10 +198,6 @@ header nav ul li a:hover {
     margin-bottom: 8px;
 }
 
-
-/* ========================================================= */
-/* Personal Page (personal.php) - Stock List               */
-/* ========================================================= */
 #personal-stock-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -263,9 +246,6 @@ header nav ul li a:hover {
     background-color: darkred;
 }
 
-/* ========================================================= */
-/* News Page (news.php)                                    */
-/* ========================================================= */
 .news-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -313,14 +293,11 @@ header nav ul li a:hover {
 
 .news-card .date {
     font-size: 0.8em;
-    text-align: left; /* יישור תאריך לשמאל בתוך הכרטיס */
+    text-align: left;
     color: #999;
     margin-top: 10px;
 }
 
-/* ========================================================= */
-/* Sector / Stock List (If used on dashboard/index)        */
-/* ========================================================= */
 .sector {
     margin-bottom: 25px;
     padding: 15px;
@@ -332,7 +309,7 @@ header nav ul li a:hover {
 
 .sector h3 {
     margin-top: 0;
-    color: #0066cc; /* צבע כחול לכותרות הסקטור */
+    color: #0066cc;
     border-bottom: 1px solid #eee;
     padding-bottom: 10px;
     margin-bottom: 15px;
@@ -345,30 +322,30 @@ header nav ul li a:hover {
 }
 
 .stock-list li {
-    padding: 10px 0; /* מרווח פנימי גדול יותר */
-    border-bottom: 1px dashed #eee; /* קו מקווקו עדין */
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .stock-list li:last-child {
-    border-bottom: none; /* הסרת קו תחתון מפריט אחרון */
+    border-bottom: none;
 }
 
 .price {
     font-weight: bold;
-    color: green; /* צבע ירוק למחיר */
+    color: green;
     font-size: 1.05em;
 }
 
 .show-more {
-    margin-top: 15px; /* מרווח גדול יותר מהרשימה */
+    margin-top: 15px;
     padding: 8px 15px;
     background-color: #5c91fe;
     color: white;
     border: none;
-    border-radius: 8px; /* פינות מעוגלות יותר */
+    border-radius: 8px;
     cursor: pointer;
     font-size: 0.95em;
     font-weight: bold;
@@ -379,21 +356,15 @@ header nav ul li a:hover {
     background-color: #4a7ddb;
 }
 
-/* ========================================================= */
-/* Footer                                                  */
-/* ========================================================= */
-.site-footer { /* שם קלאס סמנטי יותר */
+.site-footer {
     text-align: center;
     margin-top: 50px;
     padding: 20px;
-    background-color: #333; /* רקע כהה */
+    background-color: #333;
     color: white;
     font-size: 0.9em;
 }
 
-/* ========================================================= */
-/* Media Queries (Responsive Design)                       */
-/* ========================================================= */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -408,11 +379,11 @@ header nav ul li a:hover {
 
     .form-container, .main-content-info {
         padding: 15px;
-        margin: 20px auto; /* מרווח קטן יותר במובייל */
+        margin: 20px auto;
     }
 
     .toggle-btn {
-        padding: 12px 15px; /* כפתורים קטנים יותר */
+        padding: 12px 15px;
         font-size: 1em;
     }
 
@@ -421,18 +392,24 @@ header nav ul li a:hover {
     }
 
     .news-grid {
-        grid-template-columns: 1fr; /* טור אחד במובייל */
+        grid-template-columns: 1fr;
     }
 
     #personal-stock-list {
-        grid-template-columns: 1fr; /* טור אחד במובייל */
+        grid-template-columns: 1fr;
     }
     .stock-list li {
-        flex-direction: column; /* בערימה במובייל */
+        flex-direction: column;
         align-items: flex-start;
     }
     .price {
         float: none;
         margin-top: 5px;
     }
+}
+.welcome-text {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    direction: rtl;
 }

@@ -5,7 +5,6 @@ if (!isset($_SESSION["user_id"]) || !isset($_SESSION["user_name"])) {
   exit;
 }
 
-// חיבור למסד
 $host = "sql309.byethost17.com";
 $user = "b17_39144683";
 $password = "LAJZhd!@FRR8zTE";
@@ -16,14 +15,12 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-// שליפת כל המניות
 $stocks = [];
 $result = $conn->query("SELECT * FROM stocks");
 while ($row = $result->fetch_assoc()) {
   $stocks[] = $row;
 }
 
-// שליפת התיק האישי של המשתמש
 $user_id = $_SESSION["user_id"];
 $portfolio = [];
 $stmt = $conn->prepare("SELECT stock_symbol FROM portfolio WHERE user_id = ?");
@@ -44,6 +41,7 @@ $conn->close();
   <link rel="stylesheet" href="style.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <style>
+    
     .form-container {
       display: flex;
       flex-wrap: wrap;
@@ -84,11 +82,10 @@ $conn->close();
     </ul>
   </nav>
 </header>
-
 <div class="form-container" id="dashboard-container">
+  <input type="text" id="stock-search" placeholder="חפש מניה או סקטור..." style="width: 300px; padding: 8px; margin-bottom: 25px; border-radius: 8px; border: 1px solid #ccc; font-size: 1em; direction: rtl;">
   <h2 style="width: 100%; text-align: center;">📈 תיק השקעות לפי סקטורים</h2>
 </div>
-
 <script>
 const allStocks = <?php echo json_encode($stocks); ?>;
 let userPortfolio = <?php echo json_encode($portfolio); ?>;
@@ -114,6 +111,24 @@ $(document).ready(function () {
       </div>
     `);
     $(".form-container").append(sectorDiv);
+  $("#stock-search").on("input", function () {
+  const query = $(this).val().toLowerCase();
+
+    $(".sector").each(function () {
+      const $sectorDiv = $(this);
+      const sectorName = $sectorDiv.find("h3").text().toLowerCase();
+      let matchFound = false;
+
+      $sectorDiv.find("li").each(function () {
+        const text = $(this).text().toLowerCase();
+        const matches = text.includes(query) || sectorName.includes(query);
+        $(this).toggle(matches);
+        if (matches) matchFound = true;
+      });
+
+      $sectorDiv.toggle(matchFound);
+    });
+  });
 
     const list = $("#" + id);
     sectorLists[sector].forEach((stock, i) => {

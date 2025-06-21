@@ -95,7 +95,7 @@ $userName = $_SESSION['user_name'];
   </ul>
 </main>
 
-<footer>
+<footer class="site-footer">
   <p>צור קשר: guy.marcus@ruppin365.net</p>
 </footer>
 

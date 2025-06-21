@@ -65,13 +65,18 @@ $name = $is_logged_in ? $_SESSION["user_name"] : "";
   <main>
     <section class="intro" id="welcome-section">
       <?php if ($is_logged_in): ?>
-        <h1>ברוך הבא חזרה, <?= htmlspecialchars($name) ?></h1>
+        <div class="welcome-text">
+        <h1 >ברוך הבא חזרה, <?= htmlspecialchars($name) ?></h1>
         <p>התחל לעקוב אחרי מניות חדשות ולהתעדכן בפרופיל שלך.</p>
         <a href="dashboard.php"><button>מעבר לדאשבורד</button></a>
+        </div>
       <?php else: ?>
-        <h1>ברוכים הבאים ל-<span class="highlight">TradeMe</span></h1>
-        <p>המערכת שתעזור לך לנהל את הפרופיל המסחרי שלך בצורה חכמה ומותאמת אישית.</p>
+        <div class="welcome-text">
+          <h1>ברוכים הבאים ל-<span class="highlight">TradeMe</span></h1>
+          <p>המערכת שתעזור לך לנהל את הפרופיל המסחרי שלך בצורה חכמה ומותאמת אישית.</p>
+        </div>
       <?php endif; ?>
+
 
       <div class="hero-message">
         <div class="section-title">רקע</div>
@@ -97,12 +102,10 @@ $name = $is_logged_in ? $_SESSION["user_name"] : "";
           </p>
         <?php endif; ?>
       </div>
-
-      <button id="start-btn">לחץ כאן להתחלה</button>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>צור קשר: guy.marcus@ruppin365.net</p>
     <button id="founder-btn">למעבר לדף המייסד</button>
   </footer>
@@ -112,13 +115,7 @@ $name = $is_logged_in ? $_SESSION["user_name"] : "";
       window.location.href = "about_me.php";
     });
 
-    $("#start-btn").on("click", function () {
-      <?php if ($is_logged_in): ?>
-        window.location.href = "dashboard.php";
-      <?php else: ?>
-        window.location.href = "login.php";
-      <?php endif; ?>
-    });
+
   </script>
 </body>
 </html>

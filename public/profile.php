@@ -118,4 +118,7 @@ $row = $res->fetch_assoc();
   </div>
 </div>
 </body>
+<footer class="site-footer">
+  <p>צור קשר: guy.marcus@ruppin365.net</p>
+</footer>
 </html>
